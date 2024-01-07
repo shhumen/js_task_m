@@ -1,13 +1,11 @@
 const tableSize = 10
 
 const multiplication_table = () => {
-  for (i = 2; i <= tableSize; i++) {
-    for (j = 2; j <= tableSize; j++) {
-      if (j === 10) {
-        console.log('============\n')
-      }
+  for (i = 1; i <= tableSize; i++) {
+    for (j = 1; j <= tableSize; j++) {
       console.log(`${i} * ${j} = ${i * j}`)
     }
+    console.log('============\n')
   }
 }
 
