@@ -1,6 +1,7 @@
 function drawFilledSquare(size) {
+  let row = ''
   for (let i = 0; i < size; i++) {
-    let row = ''
+    row = ' '
     for (let j = 0; j < size; j++) {
       row += ' * '
     }
