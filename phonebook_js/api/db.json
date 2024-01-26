@@ -1,0 +1,214 @@
+{
+  "phonebook": [
+    {
+      "id": "1",
+      "firstname": "John",
+      "lastname": "Doe",
+      "phone": "123-456-7890",
+      "email": "john.doe@example.com"
+    },
+    {
+      "id": "2",
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "phone": "987-654-3210",
+      "email": "jane.smith@example.com"
+    },
+    {
+      "id": "3",
+      "firstname": "Alice",
+      "lastname": "Johnson",
+      "phone": "555-123-4567",
+      "email": "alice.johnson@example.com"
+    },
+    {
+      "id": "4",
+      "firstname": "Bob",
+      "lastname": "Williams",
+      "phone": "444-789-0123",
+      "email": "bob.williams@example.com"
+    },
+    {
+      "id": "5",
+      "firstname": "Charlie",
+      "lastname": "Davis",
+      "phone": "333-234-5678",
+      "email": "charlie.davis@example.com"
+    },
+    {
+      "id": "6",
+      "firstname": "Eva",
+      "lastname": "Moore",
+      "phone": "222-901-2345",
+      "email": "eva.moore@example.com"
+    },
+    {
+      "id": "7",
+      "firstname": "David",
+      "lastname": "Lee",
+      "phone": "111-678-9012",
+      "email": "david.lee@example.com"
+    },
+    {
+      "id": "8",
+      "firstname": "Grace",
+      "lastname": "Martin",
+      "phone": "999-345-6789",
+      "email": "grace.martin@example.com"
+    },
+    {
+      "id": "9",
+      "firstname": "Frank",
+      "lastname": "Clark",
+      "phone": "888-012-3456",
+      "email": "frank.clark@example.com"
+    },
+    {
+      "id": "10",
+      "firstname": "Holly",
+      "lastname": "Harrison",
+      "phone": "777-567-8901",
+      "email": "holly.harrison@example.com"
+    },
+    {
+      "id": "11",
+      "firstname": "Isaac",
+      "lastname": "Turner",
+      "phone": "666-234-5678",
+      "email": "isaac.turner@example.com"
+    },
+    {
+      "id": "12",
+      "firstname": "Jack",
+      "lastname": "Miller",
+      "phone": "555-901-2345",
+      "email": "jack.miller@example.com"
+    },
+    {
+      "id": "13",
+      "firstname": "Karen",
+      "lastname": "Brown",
+      "phone": "444-567-8901",
+      "email": "karen.brown@example.com"
+    },
+    {
+      "id": "14",
+      "firstname": "Liam",
+      "lastname": "Wilson",
+      "phone": "333-123-4567",
+      "email": "liam.wilson@example.com"
+    },
+    {
+      "id": "15",
+      "firstname": "Mia",
+      "lastname": "Jones",
+      "phone": "222-789-0123",
+      "email": "mia.jones@example.com"
+    },
+    {
+      "id": "16",
+      "firstname": "Noah",
+      "lastname": "White",
+      "phone": "111-234-5678",
+      "email": "noah.white@example.com"
+    },
+    {
+      "id": "17",
+      "firstname": "Olivia",
+      "lastname": "Anderson",
+      "phone": "999-901-2345",
+      "email": "olivia.anderson@example.com"
+    },
+    {
+      "id": "18",
+      "firstname": "Owen",
+      "lastname": "Taylor",
+      "phone": "888-567-8901",
+      "email": "owen.taylor@example.com"
+    },
+    {
+      "id": "19",
+      "firstname": "Penelope",
+      "lastname": "Brown",
+      "phone": "777-234-5678",
+      "email": "penelope.brown@example.com"
+    },
+    {
+      "id": "21",
+      "firstname": "Ryan",
+      "lastname": "Miller",
+      "phone": "555-567-8901",
+      "email": "ryan.miller@example.com"
+    },
+    {
+      "id": "22",
+      "firstname": "Sophia",
+      "lastname": "Martin",
+      "phone": "444-234-5678",
+      "email": "sophia.martin@example.com"
+    },
+    {
+      "id": "23",
+      "firstname": "Theo",
+      "lastname": "Clark",
+      "phone": "333-901-2345",
+      "email": "theo.clark@example.com"
+    },
+    {
+      "id": "24",
+      "firstname": "Uma",
+      "lastname": "Harrison",
+      "phone": "222-567-8901",
+      "email": "uma.harrison@example.com"
+    },
+    {
+      "id": "25",
+      "firstname": "Vincent",
+      "lastname": "Turner",
+      "phone": "111-234-5678",
+      "email": "vincent.turner@example.com"
+    },
+    {
+      "id": "27",
+      "firstname": "Xander",
+      "lastname": "Brown",
+      "phone": "888-567-8901",
+      "email": "xander.brown@example.com"
+    },
+    {
+      "firstname": "Zoe",
+      "lastname": "Martin",
+      "phone": "555-567-8901",
+      "email": "zoe.martin@example.com",
+      "id": "30"
+    },
+    {
+      "firstname": "Anakin ",
+      "lastname": "Skywalker",
+      "phone": "+0 000 000",
+      "email": "anakinkywalker@gmail.com",
+      "id": "7315"
+    },
+    {
+      "firstname": "Shumen",
+      "lastname": "Mehdiyeva",
+      "phone": "0703654989",
+      "email": "mehtiyeva@gmail.com",
+      "id": "17f2"
+    },
+    {
+      "firstname": "Johnny ",
+      "lastname": "Deppo",
+      "phone": "+797979",
+      "email": "johnny.depp@gmail.com",
+      "id": "02ce"
+    },
+    {
+      "firstname": "Shumen03",
+      "lastname": "Mehdiyeva",
+      "phone": "5885858",
+      "email": "sh.mehdiyeva@e-uni.az",
+      "id": "b2f4"
+    }
+  ]
+}

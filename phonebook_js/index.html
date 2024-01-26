@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <h3 class="text-center header">Phone Book</h3>
+        <div class="col-12 col-sm-5 col-lg-5 d-none d-sm-block col-md-12 mt-4">
+          <form class="border p-4 rounded" id="phonebook-create-form">
+            <input type="hidden" name="id" />
+            <div class="mb-3 form-group">
+              <label for="exampleInputFirstName" class="form-label mb-2"
+                >Name
+              </label>
+              <input id="firstName" type="text" class="form-control" />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="exampleInputsurname" class="form-label mb-2"
+                >Surname</label
+              >
+              <input id="lastName" type="text" class="form-control" />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="exampleInputPhone" class="form-label mb-2"
+                >Phone</label
+              >
+              <input id="phone" type="tel" class="form-control" />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="exampleInputEmail1" class="form-label mb-2"
+                >Email address</label
+              >
+              <input id="email" type="email" class="form-control" />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+
+            <div class="mb-3 form-group">
+              <button
+                id="clear"
+                type="reset"
+                class="btn shadow-sm btn-outline-danger"
+              >
+                Clear
+              </button>
+              <button
+                id="save"
+                type="submit"
+                class="btn shadow-sm btn-outline-success float-end"
+              >
+                Save
+              </button>
+              <button
+                id="update"
+                type="button"
+                class="btn shadow-sm mx-3 btn-outline-warning float-end"
+              >
+                Update
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-sm-7 col-lg-7 col-md-12 mt-4">
+          <table class="table table-hover table-bordered">
+            <thead>
+              <tr class="mb-4">
+                <th class="d-none">ID</th>
+                <th class="text-capitalize fw-semibold p-3">Name</th>
+                <th class="text-capitalize fw-semibold p-3">Surname</th>
+                <th class="text-capitalize fw-semibold p-3">Phone</th>
+                <th class="text-capitalize fw-semibold p-3">Email</th>
+                <th class="text-capitalize fw-semibold p-3">Manage</th>
+              </tr>
+            </thead>
+            <tbody id="phonebook-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="editModalShow"
+      tabindex="-1"
+      aria-labelledby="editModalShowLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editModalShowLabel">
+              New message
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="editModalForm">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Name</label>
+                <input type="text" class="form-control" id="modal-firstName" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Surname</label>
+                <input type="text" class="form-control" id="modal-lastName" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Phone</label>
+                <input type="tel" class="form-control" id="modal-phone" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Mail</label>
+                <input type="email" class="form-control" id="modal-mail" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-dark">Reset</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-danger" id="update-modal-btn">
+              Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Are you sure ?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Do you really want to delete this contact ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-danger" id="delete-modal-btn">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/script.js"></script>
+  </body>
+</html>

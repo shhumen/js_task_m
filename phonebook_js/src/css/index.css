@@ -1,0 +1,41 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+#phonebook-table-body {
+  td {
+    text-align: center !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+  }
+  tr,
+  td {
+    border: none !important;
+    outline: none !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  td:nth-child(2) {
+    border-radius: 7px;
+    background-color: rgb(80, 151, 115) !important;
+    color: #fff !important;
+    font-weight: 600;
+  }
+
+  thead {
+    display: none;
+  }
+}
+
+.header {
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(29, 105, 156);
+}
