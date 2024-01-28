@@ -4,6 +4,9 @@ let cards = []
 let firstCard, secondCard
 let lockBoard = false
 let score = 0
+let timer
+let seconds = 60
+let matchedPairs = 0
 
 document.querySelector('.score').textContent = score
 
@@ -14,6 +17,22 @@ fetch('./data/data.json')
     shuffleCards()
     generateCards()
   })
+
+function startTimer() {
+  timer = setInterval(() => {
+    seconds--
+    document.querySelector('.timer').textContent = seconds
+
+    if (seconds === 0) {
+      stopTimer()
+      endGame(false)
+    }
+  }, 1000)
+}
+
+function stopTimer() {
+  clearInterval(timer)
+}
 
 function shuffleCards() {
   let currentIndex = cards.length
@@ -42,6 +61,7 @@ function generateCards() {
     gridContainer.appendChild(cardElement)
     cardElement.addEventListener('click', flipCard)
   }
+  startTimer()
 }
 
 function resetBoard() {
@@ -56,6 +76,12 @@ function disableCard() {
     secondCard.removeEventListener('click', flipCard)
     firstCard.remove()
     secondCard.remove()
+    matchedPairs++
+
+    if (matchedPairs === cards.length / 2) {
+      stopTimer()
+      endGame(true)
+    }
     resetBoard()
   }, 1000)
 }
@@ -69,8 +95,7 @@ function unFlipCard() {
 }
 
 function flipCard() {
-  if (lockBoard) return
-  if (this === firstCard) return
+  if (lockBoard || this.classList.contains('flipped')) return
 
   this.classList.add('flipped')
   if (!firstCard) {
@@ -84,21 +109,35 @@ function flipCard() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name
 
   if (isMatch) {
-    // score += 10
+    score += 10
     document.querySelector('.score').textContent = score
     disableCard()
   } else {
-    // score -= 10
+    score -= 5
     document.querySelector('.score').textContent = score
     unFlipCard()
   }
 }
 
+function endGame(success) {
+  stopTimer()
+  if (success) {
+    alert('Congratulations! You completed the game successfully.')
+  } else {
+    alert('Game Over! You ran out of time.')
+  }
+
+  stopTimer()
+}
+
 function restart() {
+  stopTimer()
   resetBoard()
   shuffleCards()
   score = 0
   document.querySelector('.score').textContent = score
+  document.querySelector('.timer').textContent = 60
+  seconds = 60
   gridContainer.innerHTML = ''
   generateCards()
 }
