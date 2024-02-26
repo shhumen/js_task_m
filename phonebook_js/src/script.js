@@ -9,17 +9,17 @@ const phonebookLastNameInput = phonebookCreateForm.querySelector('#lastName')
 const phonebookPhoneInput = phonebookCreateForm.querySelector('#phone')
 const phonebookEamilInput = phonebookCreateForm.querySelector('#email')
 
+// For mobile edit modal
 const editModalForm = document.querySelector('#editModalForm')
 const editNameInput = editModalForm.querySelector('#modal-firstName')
 const editLastNameInput = editModalForm.querySelector('#modal-lastName')
 const editPhoneInput = editModalForm.querySelector('#modal-phone')
 const editEamilInput = editModalForm.querySelector('#modal-email')
+const deleteModal = document.querySelector('#exampleModal')
 
 let editingPersonId = null
 
 document.querySelector('#update').style.display = 'none'
-
-const deleteModal = document.querySelector('#exampleModal')
 
 async function fetchData() {
   const response = await fetch(`${BASE_URL}/phonebook`)
@@ -27,7 +27,6 @@ async function fetchData() {
     return []
   }
   const phonebook = await response.json()
-  console.log(phonebook)
 
   return phonebook
 }
@@ -94,6 +93,18 @@ function createRowElement(person) {
   editBtn.addEventListener('click', () => {
     populateEditForm(person)
   })
+
+  // if (window.innerWidth < 576) {
+  //   const editBtnModal = tableRowElement.querySelector('#edit')
+  //   editBtn.setAttribute('data-bs-toggle', 'modal')
+  //   editBtn.setAttribute('data-bs-target', 'editModalShow')
+
+  //   editBtnModal.addEventListener('click', () => {
+  //     const editModal = document.querySelector('#editModalShow')
+  //     // editModal.modal('show')
+  //     populateEditForm(person)
+  //   })
+  // }
 
   return tableRowElement
 }
@@ -188,5 +199,7 @@ document.querySelector('#update').addEventListener('click', () => {
     editingPersonId = null
   }
 })
+
+// editBtnForMobile = document.
 
 fillData()
